@@ -1,6 +1,6 @@
 FROM centos:7
 MAINTAINER linuxtechlab
-LABEL Remarks=”This is a dockerfile example for Centos system”
+LABEL Remarks="This is a dockerfile example for Centos system"
 RUN yum -y update && \
 yum -y install httpd && \
 yum clean all
