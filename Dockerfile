@@ -1,13 +1,12 @@
-FROM centos:7
+﻿FROM centos:7
 MAINTAINER linuxtechlab
 LABEL Remarks="This is a dockerfile example for Centos system"
 RUN yum -y update && \
 yum -y install httpd && \
 yum clean all
-COPY data/httpd.conf /etc/httpd/conf/httpd.conf
-ADD data/html.tar.gz /var/www/html/
+#COPY data/httpd.conf /etc/httpd/conf/httpd.conf
+#ADD data/html.tar.gz /var/www/html/
 EXPOSE 80
-ENV HOME /root
-WORKDIR /root
-ENTRYPOINT [“ping”]
-CMD [“google.com”]
+#ENV HOME /root
+#WORKDIR /root
+ENTRYPOINT [“ping”,“google.com”]
